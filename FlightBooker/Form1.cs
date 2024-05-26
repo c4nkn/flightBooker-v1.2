@@ -26,5 +26,35 @@ namespace FlightBooker
         {
 
         }
+
+        public void closeButton_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        public void closeButton_MouseEnter(object sender, EventArgs e)
+        {
+            closeButton.BackColor = Color.FromArgb(37, 38, 44);
+        }
+
+        public void closeButton_MouseLeave(object sender, EventArgs e)
+        {
+            closeButton.BackColor = Color.FromArgb(24, 24, 27);
+        }
+
+        public void minimizeButton_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        public void minimizeButton_MouseEnter(object sender, EventArgs e)
+        {
+            minimizeButton.BackColor = Color.FromArgb(37, 38, 44);
+        }
+
+        public void minimizeButton_MouseLeave(object sender, EventArgs e)
+        {
+            minimizeButton.BackColor = Color.FromArgb(24, 24, 27);
+        }
     }
 }
