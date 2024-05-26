@@ -67,6 +67,10 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Airport.cs" />
+    <Compile Include="Models\Aircraft.cs" />
+    <Compile Include="Models\Flight.cs" />
+    <Compile Include="Models\Reservation.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -82,12 +86,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="Fonts\Geist-Bold.ttf" />
-    <None Include="Fonts\Geist-Light.ttf" />
-    <None Include="Fonts\Geist-Regular.ttf" />
-    <None Include="Fonts\GeistMono-Bold.ttf" />
-    <None Include="Fonts\GeistMono-Light.ttf" />
-    <None Include="Fonts\GeistMono-Regular.ttf" />
+    <EmbeddedResource Include="Fonts\Geist-Bold.ttf" />
+    <EmbeddedResource Include="Fonts\Geist-Light.ttf" />
+    <EmbeddedResource Include="Fonts\Geist-Regular.ttf" />
+    <EmbeddedResource Include="Fonts\GeistMono-Bold.ttf" />
+    <EmbeddedResource Include="Fonts\GeistMono-Light.ttf" />
+    <EmbeddedResource Include="Fonts\GeistMono-Regular.ttf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -113,8 +117,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

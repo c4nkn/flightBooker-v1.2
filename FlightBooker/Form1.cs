@@ -13,25 +13,21 @@ namespace FlightBooker
 {
     public partial class MainForm : Form
     {
+        private bool isMouseDown;
+        private Point lastLocation;
         private PrivateFontCollection fontCollection = new PrivateFontCollection();
 
         public MainForm()
         {
-            fontCollection.AddFontFile("..\\..\\Fonts\\GeistMono-Light.ttf");
-
             InitializeComponent();
+            LoadFonts();
 
-            Font customFont = new Font(fontCollection.Families[0], 12);
-            label1.Font = customFont;
+            label1.Font = new Font(fontCollection.Families[0], label1.Font.Size);
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
+        private void LoadFonts()
         {
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            fontCollection.AddFontFile("..\\..\\Fonts\\GeistMono-Light.ttf");
         }
 
         public void closeButton_Click(object sender, EventArgs e)
@@ -62,6 +58,28 @@ namespace FlightBooker
         public void minimizeButton_MouseLeave(object sender, EventArgs e)
         {
             minimizeButton.BackColor = Color.FromArgb(24, 24, 27);
+        }
+
+        public void MainForm_MouseDown(object sender, MouseEventArgs e)
+        {
+            isMouseDown = true;
+            lastLocation = e.Location;
+        }
+
+        public void MainForm_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (isMouseDown)
+            {
+                this.Location = new Point(
+                    (this.Location.X - lastLocation.X) + e.X, (this.Location.Y - lastLocation.Y) + e.Y);
+
+                this.Update();
+            }
+        }
+
+        public void MainForm_MouseUp(object sender, MouseEventArgs e)
+        {
+            isMouseDown = false;
         }
     }
 }
