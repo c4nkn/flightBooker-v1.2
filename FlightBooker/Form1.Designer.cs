@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.minimizeButton = new System.Windows.Forms.Label();
             this.closeButton = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,18 +45,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(845, 30);
             this.panel1.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Geist Mono Light", 9.749999F);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(163)))), ((int)(((byte)(175)))));
-            this.label1.Location = new System.Drawing.Point(12, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "FLIGHTBOOKER";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // minimizeButton
             // 
@@ -87,6 +75,18 @@
             this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
             this.closeButton.MouseEnter += new System.EventHandler(this.closeButton_MouseEnter);
             this.closeButton.MouseLeave += new System.EventHandler(this.closeButton_MouseLeave);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Geist Mono Light", 9.749999F);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(163)))), ((int)(((byte)(175)))));
+            this.label1.Location = new System.Drawing.Point(12, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(103, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "FLIGHTBOOKER";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // MainForm
             // 
